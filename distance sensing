@@ -1,0 +1,33 @@
+int led =7;
+int trig=8;
+int echo=9;
+int sound=6;
+
+void setup(){
+  pinMode(led,OUTPUT);
+  pinMode(trig,OUTPUT);
+  pinMode(echo,INPUT);
+  pinMode(sound,OUTPUT);
+  
+}
+
+void loop(){
+      digitalWrite(trig,LOW);
+      delayMicroseconds(2);
+      digitalWrite(trig,HIGH);
+      delayMicroseconds(10);
+      digitalWrite(trig,LOW);
+      unsigned long d=pulseIn(echo,HIGH);
+      int dis=(d/2)/29.1;
+      if(dis<=20){                                   //detects everything withing 20cm
+        digitalWrite(led,HIGH); 
+        tone(sound,1000);
+        delay(1000);
+        noTone(sound);
+        }
+      else{
+        digitalWrite(led,LOW); 
+        }
+
+        delay(10);
+}
