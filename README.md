@@ -7,11 +7,11 @@ About:
   
 Requirements:
 
-  Arduino UNO
-  LED
-  Buzzer
-  Jumper wire
-  HC-SR04 ultrasonic sensor
+  Arduino UNO,
+  LED,
+  Buzzer,
+  Jumper wire,
+  HC-SR04 ultrasonic sensor,
   Breadboard
   
   
